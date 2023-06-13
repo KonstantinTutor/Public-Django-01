@@ -1,8 +1,13 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+
 # Create your views here.
 
 
 def home(request):
-    return HttpResponse('Hello')
+    length = list(range(6, 25))
+    return render(request, 'home.html', {'lst': length})
+
+
+def password(request):
+    return render(request, 'password.html')
 
